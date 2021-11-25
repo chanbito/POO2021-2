@@ -1,7 +1,7 @@
 import java.util.Hashtable;
 public class Agenda {
     private Hashtable<DiasDaSemana,Treino> agendaTreino;
-    private Hashtable<DiasDaSemana,Dieta> agendaDieta;
+    private Hashtable<DiasDaSemana,Alimentacao> agendaDieta;
 
     public void setAgendaTreino(DiasDaSemana dia, Treino T) {
             if(agendaTreino == null){
@@ -10,9 +10,9 @@ public class Agenda {
             agendaTreino.put(dia, T);
     }
 
-    public void setAgendaDieta(DiasDaSemana dia, Dieta dieta) {
+    public void setAgendaDieta(DiasDaSemana dia, Alimentacao dieta) {
         if(agendaDieta == null){
-            agendaDieta = new Hashtable<DiasDaSemana, Dieta>();
+            agendaDieta = new Hashtable<DiasDaSemana, Alimentacao>();
         }
         agendaDieta.put(dia, dieta);
 
@@ -22,7 +22,7 @@ public class Agenda {
         return agendaTreino;
     }
 
-    public Hashtable<DiasDaSemana, Dieta> getAgendaDieta() {
+    public Hashtable<DiasDaSemana, Alimentacao> getAgendaDieta() {
         return agendaDieta;
     }
 

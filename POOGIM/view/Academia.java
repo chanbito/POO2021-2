@@ -6,7 +6,7 @@ public class Academia {
         var aluno = new Aluno("Gabriel", "Teste@Teste.com.br", 10000010);
         aluno.agenda.setAgendaTreino(DiasDaSemana.segunda, new Treino(prof.get_id(), "Perna", "Agachamento", "3/20"));
         aluno.agenda.setAgendaTreino(DiasDaSemana.quinta, new Treino(prof.get_id(), "Perna", "Agachamento", "3/20"));
-        var dieta = new Dieta(nutri.get_id(), "Pre-Treino", "Dieta rica em batata", 3000);
+        var dieta = new Alimentacao(nutri.get_id(), "Pre-Treino", "Dieta rica em batata", 3000);
         aluno.agenda.setAgendaDieta(DiasDaSemana.domingo, dieta);
         aluno.agenda.setAgendaDieta(DiasDaSemana.quarta, dieta);
         System.out.println(aluno);

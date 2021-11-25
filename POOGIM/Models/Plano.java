@@ -1,4 +1,4 @@
-public class Plano {
+public abstract class Plano {
     private int ColabId;
     private String Tipo;
     private String descricao;

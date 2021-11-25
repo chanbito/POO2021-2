@@ -1,4 +1,4 @@
-public class Pessoa{
+public abstract class Pessoa{
     private String _nome;
     private String _email;
     private long _matricula;

@@ -1,7 +1,7 @@
-public class Dieta extends Plano {
+public class Alimentacao extends Plano {
     private int CaloriasDiarias;
 
-    public Dieta(int colabId, String tipo, String descricao, int caloriasDiarias) {
+    public Alimentacao(int colabId, String tipo, String descricao, int caloriasDiarias) {
         super(colabId, tipo, descricao);
         CaloriasDiarias = caloriasDiarias;
     }
@@ -16,6 +16,6 @@ public class Dieta extends Plano {
 
     @Override
     public String toString() {
-        return " Treino ["+ this.getStringInfo() +" Calorias= " + CaloriasDiarias + " ] ";
+        return " Alimentacao ["+ this.getStringInfo() +" Calorias= " + CaloriasDiarias + " ] ";
     }
 }
