@@ -1,15 +1,22 @@
 public class colaborador extends Pessoa {
-    public colaborador(String _nome, String _email, long _matricula, int id) {
-        super(_nome, _email, _matricula, id);
-    }
-    private float valorHora;
+    private double valorHora;
     private String funcao;
 
-    public float getValorHora() {
+    public colaborador(String _nome, String _email, long _matricula, Double valorHora, String funcao) {
+        super(_nome, _email, _matricula);
+        this.valorHora = valorHora;
+        this.funcao = funcao;
+    }
+    
+    public double getValorHora() {
         return valorHora;
     }
-    public void setValorHora(float valorHora) {
+    public void setValorHora(double valorHora) {
         this.valorHora = valorHora;
+    }
+
+    public double getSalario(int horas){
+        return valorHora * horas;
     }
     
     public String getFuncao() {
