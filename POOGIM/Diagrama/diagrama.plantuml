@@ -6,7 +6,7 @@ abstract class Pessoa {
     - _email: String
     -  _matricula: long
     - id: int
-    - ID: int 
+    - {static} ID: int 
     + construtor(_nome, _email, _matricula)
     + get_id() : int
     + GenerateID():int
@@ -36,7 +36,7 @@ class Agenda {
     - agendaTreino : Hashtable<DiaDaSemana,Treino>
     - agendaDieta : Hashtable<DiaDaSemana,Alimentacao>
     + setAgendaTreino(dia, T)
-    + setAgendaDieta(DiaDaSemana dia, Alimentacao dieta)
+    + setAgendaDieta(dia, dieta)
     + getAgendaTreino() : Hashtable<DiaDaSemana, Treino>
     + getAgendaDieta() : Hashtable<DiaDaSemana, Alimentacao>
     + String toString()
@@ -81,6 +81,8 @@ class Treino {
 
 Treino <|-- Plano
 Aluno <|-- Pessoa
+Agenda <|-- Treino
+Agenda <|-- Alimentacao
 colaborador <|-- Pessoa
 Agenda *-- DiaDaSemana
 Aluno *-- Agenda
