@@ -1,0 +1,89 @@
+@startuml Gym
+title Gym
+
+abstract class Pessoa {
+    - _nome: String 
+    - _email: String
+    -  _matricula: long
+    - id: int
+    - ID: int 
+    + construtor(_nome, _email, _matricula)
+    + get_id() : int
+    + GenerateID():int
+    + get_matricula() :long
+    + get_email() :String
+    + set_email(_email) 
+    + get_nome():String
+    + toString() :String
+}
+class Aluno {
+    -agenda : Agenda 
+    +construtor(_nome, _email, _matricula) 
+    +getAgenda() : Agenda
+}
+class colaborador {
+    - valorHora : double
+    - funcao : String
+    +construtor(_nome, _email, _matricula, valorHora, funcao)
+    +getValorHora() : double
+    +setValorHora(valorHora)
+    +getSalario(horas): double
+    +getFuncao():String
+    +setFuncao(funcao)
+    +toString():String
+}
+class Agenda {
+    - agendaTreino : Hashtable<DiaDaSemana,Treino>
+    - agendaDieta : Hashtable<DiaDaSemana,Alimentacao>
+    + setAgendaTreino(dia, T)
+    + setAgendaDieta(DiaDaSemana dia, Alimentacao dieta)
+    + getAgendaTreino() : Hashtable<DiaDaSemana, Treino>
+    + getAgendaDieta() : Hashtable<DiaDaSemana, Alimentacao>
+    + String toString()
+}
+enum DiaDaSemana {
+    +segunda : DiaDaSemana
+    +terca : DiaDaSemana
+    +quarta : DiaDaSemana
+    +quinta : DiaDaSemana
+    +sexta : DiaDaSemana
+    +sabado : DiaDaSemana
+    +domingo : DiaDaSemana
+}
+class Alimentacao {
+    - CaloriasDiarias : int 
+    + construtor(colabId, tipo, descricao, caloriasDiarias)
+    + getCaloriasDiarias() : int 
+    + setCaloriasDiarias(caloriasDiarias) 
+    + toString() : String
+}
+abstract class Plano {
+    - ColabId : int
+    - Tipo : String 
+    - descricao : String 
+    + construtor(colabId, tipo, descricao)
+    + getDescricao() : String 
+    + setDescricao(descricao)
+    + getTipo() : String 
+    + setTipo(tipo)
+    + getColabId() : int 
+    + setColabId(colabId)
+    + toString() : String 
+    # getStringInfo() : String
+}
+class Treino {
+    - sequencia : String
+    + construtor(colabId, tipo, descricao, sequencia)
+    + getSequencia() : String
+    + setSequencia( sequencia)
+    + toString() : String
+}
+
+Treino <|-- Plano
+Aluno <|-- Pessoa
+colaborador <|-- Pessoa
+Agenda *-- DiaDaSemana
+Aluno *-- Agenda
+Alimentacao <|-- Plano
+
+@enduml
