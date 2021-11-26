@@ -58,7 +58,7 @@ class Alimentacao {
     + toString() : String
 }
 abstract class Plano {
-    - ColabId : int
+    - ColabID : int
     - Tipo : String 
     - descricao : String 
     + construtor(colabId, tipo, descricao)
