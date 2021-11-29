@@ -1,0 +1,126 @@
+@startuml Projeto Dualidade
+
+title Projeto Dualidade
+
+class area{
+    - name: String
+    - description: String
+    + construtor(name, description)
+    + getNome(): String
+    + setNome(nome)
+    + getDescription(): String
+    + setDescription(description)
+    + toString(): String
+}
+
+class profile{
+    - type: String
+    - photo: Image
+    - phone: String
+    - biography: String
+    - git: String
+    + construtor(photo, phone, biography, git, type)
+    + toString(): String
+    + getType(): String
+    + setType(type) 
+    + getPhoto(): ImageIO
+    + setPhoto(photo) 
+    + getPhone(): String
+    + setPhone(phone) 
+    + getBiografy(): String
+    + setBiografy(biografy) 
+    + getGit(): String
+    + setGit(git) 
+}
+
+class user{
+    - name: String 
+    - email: String
+    - password: String
+    - _Area: Area
+    - _Profile: Profile
+    + construtor(name, email, password)
+    + toString(): String
+    + getName(): String 
+    + setName(name) 
+    + getEmail(): String 
+    + setEmail(email) 
+    + getPassword(): String
+    + setPassword(password) 
+    + get_Area(): area
+    + set_Area(_Area) 
+    + get_Profile(): profile
+    + set_Profile(_Profile) 
+}
+
+class team{
+    - name: String
+    - owner: User
+    - user: ArrayList<user>
+    + construtor(name, email, password, owner)
+    + toString(): String
+    + getName(): String
+    + setName(name) 
+    + getOwner(): user
+    + setOwner(owner) 
+    + getUsers(): ArrayList<user>
+    + addUsers(user)
+    + getEmail(): String
+    + setEmail(email)
+}
+
+class demand{
+    - title: String
+    - description: String
+    - deadline: Date
+    - type: String
+    - status: String
+    - file: file
+    - repository: String
+    - owner: User
+    - team: Team
+    + construtor(title, description, deadline, type, status, file, repository, owner, team)
+    + toString(): String
+    + getTitle(): String
+    + setTitle(title) 
+    + getDescription(): String
+    + setDescription(description) 
+    + getType(): String
+    + setType(type) 
+    + getStatus(): String
+    + setStatus(status) 
+    + getRepository() : String
+    + setRepository(repository) 
+    + getDeadline(): Date
+    + setDeadline(deadline) 
+    + getFile(): File
+    + setFile(file) 
+    + getOwner(): user
+    + setOwner(owner) 
+    + getTeam(): team
+    + setTeam(team) 
+}
+
+abstract class BaseClass{
+    - created_on: Datetime
+    - updated_on: Datetime
+    + construtor()
+    # update()
+    - setCreated_on()
+    + getUpdated_on(): Datetime
+    + getCreated_on(): Datetime
+    + GetStringDates() : String
+}
+
+team <|-- BaseClass
+demand <|-- BaseClass
+area <|-- BaseClass
+profile  <|-- BaseClass
+user <|-- BaseClass
+demand <|-- team
+demand <|-- user
+team <|-- user
+profile *-- user
+area *-- user
+
+@enduml
