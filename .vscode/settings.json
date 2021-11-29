@@ -1,9 +1,9 @@
 {
     "java.project.sourcePaths": [
-        "POOGIM\\Models",
-        "POOGIM\\view",
-        "Dualidade\\Models",
-        "Dualidade\\view"
+        "POOGIM/view",
+        "POOGIM/Models",
+        "Dualidade/view",
+        "Dualidade/Models"
     ],
     "java.dependency.packagePresentation": "hierarchical"
 }

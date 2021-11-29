@@ -88,7 +88,15 @@ public class demand extends BaseClass{
     }
     @Override
     public String toString() {
-        return "demand [deadline=" + deadline + ", description=" + description + ", file=" + file.toPath().getFileName().toString() + ", owner=" + owner.toString()
+        return "demand [deadline=" + deadline + ", description=" + description + ", file=" + filetostring() + ", owner=" + owner.toString()
                 + ", repository=" + repository + ", status=" + status + ", team=" + team + ", title=" + title + ", type=" + type + ", " + GetStringDates() +"]";
+    }
+
+    public String filetostring(){
+        if(file == null){
+            return "NULL";
+        }else{
+            return file.toString();
+        }
     }
 }
