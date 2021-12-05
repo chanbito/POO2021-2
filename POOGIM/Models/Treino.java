@@ -14,7 +14,7 @@ public class Treino extends Plano {
 
     @Override
     public String toString() {
-        return " Treino [ "+ this.getStringInfo() +" sequencia= " + sequencia + " ] ";
+        return " Treino [ "+ this.getStringInfo() +" ,sequencia= " + sequencia + " ] ";
     }
     
     

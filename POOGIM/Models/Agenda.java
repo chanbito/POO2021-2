@@ -1,34 +1,26 @@
 import java.util.Hashtable;
+
 public class Agenda {
-    private Hashtable<DiaDaSemana,Treino> agendaTreino;
-    private Hashtable<DiaDaSemana,Alimentacao> agendaDieta;
+    private Hashtable<DiaDaSemana,Plano> AgendaPlano;
 
-    public void setAgendaTreino(DiaDaSemana dia, Treino T) {
-            if(agendaTreino == null){
-                agendaTreino = new Hashtable<DiaDaSemana,Treino>();
+    public void setAgendaTreino(DiaDaSemana dia, Plano T) {
+            if(AgendaPlano == null){
+                AgendaPlano = new Hashtable<DiaDaSemana,Plano>();
             }
-            agendaTreino.put(dia, T);
+            AgendaPlano.put(dia, T);
     }
 
-    public void setAgendaDieta(DiaDaSemana dia, Alimentacao dieta) {
-        if(agendaDieta == null){
-            agendaDieta = new Hashtable<DiaDaSemana, Alimentacao>();
-        }
-        agendaDieta.put(dia, dieta);
-
+    public Hashtable<DiaDaSemana, Plano> getAgendaTreino() {
+        return AgendaPlano;
     }
 
-    public Hashtable<DiaDaSemana, Treino> getAgendaTreino() {
-        return agendaTreino;
-    }
-
-    public Hashtable<DiaDaSemana, Alimentacao> getAgendaDieta() {
-        return agendaDieta;
+    public Hashtable<DiaDaSemana, Plano> getAgendaDieta() {
+        return AgendaPlano;
     }
 
     @Override
     public String toString() {
-        return "Agenda [agendaDieta = " + agendaDieta + ", agendaTreino = " + agendaTreino + "]";
+        return "Agenda [agenda = " + AgendaPlano + "]";
     }
 }
 enum DiaDaSemana{
