@@ -43,6 +43,6 @@ public class team extends BaseClass {
     }
     @Override
     public String toString() {
-        return "team [name=" + name + ", owner=" + owner.toString() + ", users=" + users.toString() + ", " + GetStringDates() +"]";
+        return "team \n[name=" + name + ", \nowner=" + owner.toString() + ", \nusers=" + users.toString() + ",\n " + GetStringDates() +"]";
     } 
 }

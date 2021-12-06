@@ -33,12 +33,9 @@ class colaborador {
     +toString():String
 }
 class Agenda {
-    - agendaTreino : Hashtable<DiaDaSemana,Treino>
-    - agendaDieta : Hashtable<DiaDaSemana,Alimentacao>
-    + setAgendaTreino(dia, T)
-    + setAgendaDieta(dia, dieta)
-    + getAgendaTreino() : Hashtable<DiaDaSemana, Treino>
-    + getAgendaDieta() : Hashtable<DiaDaSemana, Alimentacao>
+    - AgendaPlano : Hashtable<DiaDaSemana,Plano>
+    + setAgenda(dia, T)
+    + getAgenda() : Hashtable<DiaDaSemana, Plano>
     + String toString()
 }
 enum DiaDaSemana {

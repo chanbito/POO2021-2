@@ -28,6 +28,6 @@ public class colaborador extends Pessoa {
 
     @Override
     public String toString() {
-        return "colaborador [valorHora=" + valorHora + "]";
+        return "colaborador [valorHora=" + valorHora + "]\n";
     }
 }

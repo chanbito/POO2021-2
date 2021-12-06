@@ -38,7 +38,7 @@ public abstract class Pessoa{
 
     @Override
     public String toString() {
-        return "Pessoa [_email=" + _email + ", _matricula=" + _matricula + ", _nome=" + _nome + ", id=" + id + "]";
+        return "Pessoa [_email=" + _email + ", _matricula=" + _matricula + ", _nome=" + _nome + ", id=" + id + "]\n";
     }
 
 }

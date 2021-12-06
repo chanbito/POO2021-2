@@ -41,7 +41,7 @@ public class user extends BaseClass {
     }
     @Override
     public String toString() {
-        String ret = "user [email=" + email + ", name=" + name + ", password="
+        String ret = "user \n[email=" + email + ", name=" + name + ", password="
                 + password + ", " + GetStringDates() +"]";
         if(_Area != null){
             ret += ", Area=" + _Area.toString();

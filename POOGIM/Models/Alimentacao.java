@@ -16,6 +16,6 @@ public class Alimentacao extends Plano {
 
     @Override
     public String toString() {
-        return " Alimentacao ["+ this.getStringInfo() +" Calorias= " + CaloriasDiarias + " ] ";
+        return " Alimentacao ["+ this.getStringInfo() +" Calorias= " + CaloriasDiarias + " ] \n";
     }
 }
